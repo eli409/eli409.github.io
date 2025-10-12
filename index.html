@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diana-Elisa Tița — Portofoliu</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --muted:#586072;
+      --radius:12px;
+      --maxw:1000px;
+      --gap:20px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    /*body{margin:0;background:var(--bg);color:#0f1724;line-height:1.5}*/
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #dbeafe 0%, #ffffff 100%);
+      color: #0f1724;
+      line-height: 1.5;
+    }
+
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+    .brand{display:flex;flex-direction:column}
+    .brand h1{margin:0;font-size:1.6rem}
+    .brand p{margin:4px 0 0;color:var(--muted);font-size:0.95rem}
+
+    main{display:flex;flex-direction:column;gap:28px}
+
+    section{background:transparent;padding:18px;border-radius:10px}
+
+    /* Meta section */
+    .meta {
+      font-size:0.95rem;
+      color:var(--accent);
+      font-weight:500;
+      background:#eef2ff;
+      padding:6px 12px;
+      border-radius:999px;
+    }
+
+    /* About */
+    #about{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));backdrop-filter:blur(4px);border-radius:var(--radius);padding:18px}
+    #about .content{display:flex;gap:18px;align-items:center}
+    #about .avatar {flex: 0 0 130px;height: 130px;border-radius: 50%;background: url("poza.JPG") center/cover no-repeat;display: flex;}
+    #about p{margin:0;color:var(--muted)}
+
+    /* Projects */
+    #projects .cards{display:flex;flex-wrap:wrap;gap:var(--gap)}
+    .card{background:var(--card);flex:1 1 300px;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,36,0.06);display:flex;flex-direction:column;gap:12px;min-width:240px}
+    .card h3{margin:0;font-size:1.05rem}
+    .card p{margin:0;color:var(--muted);font-size:0.95rem}
+    .card .tags{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:#eef2ff;color:#3730a3;padding:6px 8px;border-radius:999px;font-size:0.8rem}
+
+    /* Contact */
+    #contact{display:flex;flex-direction:column;gap:12px}
+    .contact-list{display:flex;flex-wrap:wrap;gap:12px}
+    .contact-item{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 12px rgba(15,23,36,0.03)}
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      padding-top: 16px;
+      border-top: 1px solid rgba(37, 99, 235, 0.2);
+      box-shadow: 0 -4px 12px rgba(37, 99, 235, 0.08);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:700px){
+      header{flex-direction:column;align-items:flex-start}
+      .wrap{margin:20px 16px}
+      #about .content{flex-direction:row;gap:12px}
+      .card{flex:1 1 100%}
+    }
+
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #1e40af;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>Diana-Elisa Tița — Studentă Informatică Economică | Portofoliu</h1>
+        <p>Universitatea Babeș-Bolyai, Facultatea de Științe Economice și Gestiunea Afacerilor, Cluj-Napoca</p>
+      </div>
+      <div class="meta" aria-hidden="true">📚 • Front-end • Proiecte</div>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">Despre mine</h2>
+        <div class="content">
+          <div class="avatar"></div>
+          <div>
+            <p>Sunt Diana-Elisa Tița, studentă în anul 3 la specializarea Informatică Economică în cadrul Facultății de Științe
+            Economice și Gestiunea Afacerilor, Universitatea „Babeș-Bolyai” din Cluj-Napoca. Îmi place să combin gândirea analitică
+            cu creativitatea, explorând domenii precum analiza datelor și dezvoltarea web.</p>
+            <p>Prin activitatea mea de voluntariat în rețeaua Erasmus Student Network și implicarea în festivaluri
+            culturale (Untold, Jazz in the Park, TIFF), am dezvoltat abilități solide de comunicare, coordonare și lucru în 
+            echipă.</p>
+            <p>Am urmat un semestru Erasmus în Polonia (AGH Kraków), o experiență care mi-a dezvoltat adaptabilitatea și curiozitatea
+            interculturală.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Proiecte</h2>
+        <div class="cards" role="list">
+
+          <article class="card" role="listitem">
+            <h3>MoodPlaylistApp (Proiect univer.)</h3>
+            <p>O aplicație web care generează un playlist Spotify personalizat în funcție de starea utilizatorului,
+            fie ea fericită, tristă, relaxată sau energetică. Aplicația folosește un Spotify API pentru a cura playlist-ul, 
+            personal, am fost responsabilă de partea de front-end.</p>
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">Dart</span>
+              <span class="tag">HTML</span>
+            </div>
+              <!--Link-->
+              <p><a href="https://github.com/hyper-joker/MoodPlaylistApp.git" target="_blank">🔗 Vezi pe GitHub</a></p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3>CV — Diana-Elisa Tița</h3>
+            <p>Include detalii despre studiile mele, experiența de voluntariat și competențele digitale și lingvistice.
+            Menționez implicarea activă în Erasmus Student Network Cluj-Napoca, unde am coordonat activități
+            pentru studenți internaționali și voluntari locali.</p>
+            <p>De asemenea, am participat ca voluntar la festivaluri culturale (Untold, Jazz in the Park, TIFF), 
+            dobândind experiență în logistică, organizare și user experience.</p>
+            <div class="tags">
+              <span class="tag">PDF</span>
+              <span class="tag">LinkedIn</span>
+            </div>
+            <p><a href="CV_Diana-Elisa_Tița.pdf" target="_blank">📄 Descarcă CV</a></p>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-list">
+          <div class="contact-item">✉️ <a href="mailto:diana.elisa.tita@gmail.com">diana.elisa.tita@gmail.com</a></div>
+          <div class="contact-item">🔗 
+            <a href="https://www.linkedin.com/in/diana-elisa-tita" target="_blank">Profil LinkedIn</a>
+            <a href="https://github.com/eli409" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © Diana-Elisa Tița — Cluj-Napoca · Pagină creată cu HTML semantic și Flexbox
+    </footer>
+  </div>
+</body>
+</html>
